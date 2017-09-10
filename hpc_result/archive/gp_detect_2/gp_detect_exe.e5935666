@@ -1,0 +1,7 @@
+ /cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/kern/src/stationary.py:184: RuntimeWarning:overflow encountered in divide
+ /cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/plotting/gpy_plot/plot_util.py:341: FutureWarning:elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+
+real	126m50.893s
+user	334m19.061s
+sys	114m4.251s
+Warning: Permanently added 'node34-017,10.131.0.65' (RSA) to the list of known hosts.

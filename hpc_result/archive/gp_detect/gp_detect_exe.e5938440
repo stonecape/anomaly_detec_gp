@@ -1,0 +1,44 @@
+Traceback (most recent call last):
+  File "./hgp-for-light-curve.py", line 127, in <module>
+    m.optimize('bfgs', messages=1)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/core/gp.py", line 565, in optimize
+    ret = super(GP, self).optimize(optimizer, start, messages, max_iters, ipython_notebook, clear_after_finish, **kwargs)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/model.py", line 111, in optimize
+    opt.run(start, f_fp=self._objective_grads, f=self._objective, fp=self._grads)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/optimization/optimization.py", line 51, in run
+    self.opt(x_init, **kwargs)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/optimization/optimization.py", line 124, in opt
+    opt_result = optimize.fmin_l_bfgs_b(f_fp, x_init, maxfun=self.max_iters, maxiter=self.max_iters, **opt_dict)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/scipy/optimize/lbfgsb.py", line 193, in fmin_l_bfgs_b
+    **opts)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/scipy/optimize/lbfgsb.py", line 328, in _minimize_lbfgsb
+    f, g = func_and_grad(x)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/scipy/optimize/lbfgsb.py", line 278, in func_and_grad
+    f = fun(x, *args)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 292, in function_wrapper
+    return function(*(wrapper_args + args))
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/scipy/optimize/optimize.py", line 63, in __call__
+    fg = self.fun(x, *args)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/model.py", line 270, in _objective_grads
+    self.optimizer_array = x
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/parameterized.py", line 336, in __setattr__
+    return object.__setattr__(self, name, val);
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/parameter_core.py", line 118, in optimizer_array
+    self.trigger_update()
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/updateable.py", line 79, in trigger_update
+    self._trigger_params_changed(trigger_parent)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/parameter_core.py", line 128, in _trigger_params_changed
+    self.notify_observers(None, None if trigger_parent else -np.inf)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/observable.py", line 91, in notify_observers
+    [callble(self, which=which) for _, _, callble in self.observers]
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/parameter_core.py", line 498, in _parameters_changed_notification
+    self.parameters_changed()
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/core/gp.py", line 193, in parameters_changed
+    self.posterior, self._log_marginal_likelihood, self.grad_dict = self.inference_method.inference(self.kern, self.X, self.likelihood, self.Y_normalized, self.mean_function, self.Y_metadata)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/inference/latent_function_inference/exact_gaussian_inference.py", line 57, in inference
+    dL_dK = 0.5 * (tdot(alpha) - Y.shape[1] * Wi)
+MemoryError
+
+real	199m49.933s
+user	352m51.414s
+sys	191m22.623s

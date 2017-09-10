@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "./hgp-for-light-curve.py", line 125, in <module>
+    m = GPy.models.GPRegression(X=X, Y=Y, kernel=k_hierarchy)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/parameterized.py", line 54, in __call__
+    self.initialize_parameter()
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/parameter_core.py", line 331, in initialize_parameter
+    self.trigger_update()
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/updateable.py", line 79, in trigger_update
+    self._trigger_params_changed(trigger_parent)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/parameter_core.py", line 128, in _trigger_params_changed
+    self.notify_observers(None, None if trigger_parent else -np.inf)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/observable.py", line 91, in notify_observers
+    [callble(self, which=which) for _, _, callble in self.observers]
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/paramz/core/parameter_core.py", line 498, in _parameters_changed_notification
+    self.parameters_changed()
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/core/gp.py", line 193, in parameters_changed
+    self.posterior, self._log_marginal_likelihood, self.grad_dict = self.inference_method.inference(self.kern, self.X, self.likelihood, self.Y_normalized, self.mean_function, self.Y_metadata)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/inference/latent_function_inference/exact_gaussian_inference.py", line 57, in inference
+    dL_dK = 0.5 * (tdot(alpha) - Y.shape[1] * Wi)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/util/linalg.py", line 320, in tdot
+    return tdot_blas(*args, **kwargs)
+  File "/cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/util/linalg.py", line 302, in tdot_blas
+    out = np.zeros((nn, nn))
+MemoryError
+
+real	50m50.357s
+user	274m18.990s
+sys	19m21.932s
+Warning: Permanently added 'node47-015,10.131.1.15' (RSA) to the list of known hosts.

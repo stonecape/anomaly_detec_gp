@@ -1,0 +1,5 @@
+ /cm/shared/languages/Python-2.7.6/lib/python2.7/site-packages/GPy/plotting/gpy_plot/plot_util.py:341: FutureWarning:elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+
+real	51m36.962s
+user	133m35.201s
+sys	19m37.762s
